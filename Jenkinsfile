@@ -1,14 +1,15 @@
 pipeline {
   agent any
   environment {
-    COMMIT_MSG = sh (script: """git log --format="medium" -1 ${GIT_COMMIT}""", returnStdout:true)
+    //COMMIT_MSG = sh (script: """git log --format="medium" -1 ${GIT_COMMIT}""", returnStdout:true)
+    COMMIT_MSG = sh (returnStdout: true, script: "git log -1 --pretty=%B").trim()
   }
   stages {
     stage('Commit_MSG') {
       steps {
         echo "The branch: ${BRANCH_NAME} and the build ${BUILD_NUMBER}"
 	sh ''' printenv '''
-	sh(returnStdout: true, script: "git log -1 --pretty=%B").trim()
+	echo "git commit msg: ${COMMIT_MSG}"
 	}
     }
   }
