@@ -12,7 +12,7 @@ pipeline {
 	//sh ''' printenv '''
 	echo "git commit msg: ${COMMIT_MSG}"
 	echo " folder name: ${FOLDER}"
-	sh (script: """git log --format="medium" -1 ${GIT_COMMIT}""", returnStdout:true) > ./commit_message.txt
+	sh (script: """git log --format="medium" -1 ${GIT_COMMIT}""") > ./commit_message.txt
 	}
     }
   }
