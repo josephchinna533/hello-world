@@ -11,8 +11,10 @@ pipeline {
         echo "The branch: ${BRANCH_NAME} and the build ${BUILD_NUMBER}"
 	//sh ''' printenv '''
 	echo "git commit msg: ${COMMIT_MSG}"
+	sh ''' touch ./commit_msg.txt'''
+	echo "${COMMIT_MSG_T} > ./commit_msg.txt
+	cat ./commit_msg.txt
 	echo " folder name: ${FOLDER}"
-	sh (script: """git log --format="medium" -1 ${GIT_COMMIT}""") > ./commit_message.txt
 	}
     }
   }
