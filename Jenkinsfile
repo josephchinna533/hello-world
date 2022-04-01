@@ -11,7 +11,7 @@ pipeline {
         echo "The branch: ${BRANCH_NAME} and the build ${BUILD_NUMBER}"
 	//sh ''' printenv '''
 	echo "git commit msg: ${COMMIT_MSG}"
-	echo " folder name: ${FOLDER}
+	echo " folder name: ${FOLDER}"
 	}
     }
   }
