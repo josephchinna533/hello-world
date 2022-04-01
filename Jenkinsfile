@@ -7,16 +7,8 @@ pipeline {
     stage('Commit_MSG') {
       steps {
         echo "The branch: ${BRANCH_NAME} and the build ${BUILD_NUMBER}"
-        sh '''
-        git log -1 --pretty=format:"%s" > ./gitcommitmsg.txt
-        '''
-        script
-        {
-          def gitcommitmsg = readFile(file: 'gitcommitmsg.txt')
-                buildDescription gitcommitmsg
-            }
-        echo "Git commit_message : ${COMMIT_MSG}"
-      }
+	printenv
+	}
     }
   }
 }
