@@ -7,7 +7,7 @@ pipeline {
     stage('Commit_MSG') {
       steps {
         echo "The branch: ${BRANCH_NAME} and the build ${BUILD_NUMBER}"
-	printenv
+	sh ''' printenv '''
 	}
     }
   }
