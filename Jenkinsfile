@@ -8,6 +8,7 @@ pipeline {
       steps {
         echo "The branch: ${BRANCH_NAME} and the build ${BUILD_NUMBER}"
 	sh ''' printenv '''
+	sh(returnStdout: true, script: "git log -1 --pretty=%B").trim()
 	}
     }
   }
