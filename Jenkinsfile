@@ -12,7 +12,7 @@ pipeline {
 	//sh ''' printenv '''
 	echo "git commit msg: ${COMMIT_MSG}"
 	sh ''' touch ./commit_msg.txt'''
-	sh ''' echo "${COMMIT_MSG_T}" > ./commit_msg.txt '''
+	sh ''' echo $COMMIT_MSG_T > ./commit_msg.txt '''
 	cat ./commit_msg.txt
 	echo " folder name: ${FOLDER}"
 	}
