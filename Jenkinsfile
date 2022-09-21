@@ -8,6 +8,7 @@ pipeline {
         }
         stage('clone') { 
             steps { 
+                echo 'I\'m cloning the repo in this stage'
                 //sh 'git clone https://github.com/josephchinna533/hello-world.git' 
                 git 'https://github.com/josephchinna533/hello-world.git'
             }
