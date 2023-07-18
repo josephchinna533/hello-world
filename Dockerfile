@@ -1,5 +1,5 @@
 FROM tomcat
 
 # Maintainer
-MAINTAINER "srikaruna"
+MAINTAINER "josephchinna"
 COPY ./webapp/target/webapp.war /usr/local/tomcat/webapps
