@@ -14,6 +14,7 @@ pipeline {
 	sh """ touch ./commit_msg.txt 
 	       	echo "${COMMIT_MSG_T}" > ./commit_msg.txt
 		echo "${COMMIT_MSG_T}" > ./commit_msg.txt
+		echo "${COMMIT_MSG_T}" > ./commit_msg.txt
 	       	cat ./commit_msg.txt
 	"""
 	//cat ./commit_msg.txt
