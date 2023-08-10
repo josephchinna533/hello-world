@@ -12,7 +12,9 @@ pipeline {
                 //sh 'git clone https://github.com/josephchinna533/hello-world.git' 
                 git 'https://github.com/josephchinna533/hello-world.git'
                 echo "Testing Changelog ----- "
+                echo "Testing Changelog ----- **********************\n "
             }
+            
         }
         stage('Build'){
             steps {
